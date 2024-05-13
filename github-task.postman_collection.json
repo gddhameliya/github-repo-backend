@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "03976f83-bd64-4226-afe1-96e944615ac1",
+		"name": "github-task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29507475",
+		"_collection_link": "https://crimson-flare-650269.postman.co/workspace/juno~614e2302-de21-4489-880b-12126ec59c5f/collection/29507475-03976f83-bd64-4226-afe1-96e944615ac1?action=share&source=collection_link&creator=29507475"
+	},
+	"item": [
+		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"gaurang123@gmail.com\",\n    \"password\": \"Admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/api/v1/user/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "sign-in",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"gaurang123@gmail.com\",\n    \"password\": \"Admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/api/v1/user/sign-in",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"sign-in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "githubRepo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjQyMDlhNzc4M2RkMjA3YWNjZDc4YzEiLCJlbWFpbCI6ImdhdXJhbmcxMjNAZ21haWwuY29tIiwiaWF0IjoxNzE1NjE3MDE4fQ.9FSxb1oDU_dFXiMCwoaz8VMvvrZEsW2iixxyn-poV_w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"gaurang123@gmail.com\",\n    \"password\": \"Admin@123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3004/api/v1/github/:username",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3004",
+					"path": [
+						"api",
+						"v1",
+						"github",
+						":username"
+					],
+					"variable": [
+						{
+							"key": "username",
+							"value": "gddhameliya"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

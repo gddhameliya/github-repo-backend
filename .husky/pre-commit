@@ -1,0 +1,18 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "Changed files are being scanned with eslint rules"
+
+#!/bin/bash
+
+# Get the list of staged files
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACMRTUXB)
+
+# Run ESLint on the staged files
+npx eslint --ext .js,.jsx -- $STAGED_FILES
+
+# If ESLint returns non-zero exit code, prevent the commit
+if [ $? -ne 0 ]; then
+  echo "ESLint has found issues in your changes. Please fix them before committing."
+  exit 1
+fi
